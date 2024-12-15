@@ -1,0 +1,61 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "main_project",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal",
+            "type": "cppdbg",
+            "windows": {
+                "type": "cppvsdbg",
+                "program": "${workspaceFolder}/build/main_project.exe",
+            },
+            "linux": {
+                "type": "cppdbg",
+                "program": "${workspaceFolder}/build/main_project",
+            },
+            "environment": [
+                {
+                    "name": "test",
+                    "value": "value"
+                }
+            ],
+            "args": [
+                "--arg1",
+                "--value1",
+                "--arg2",
+                "value2"
+            ],
+            "preLaunchTask": "build_main",
+        },
+        {
+            "name": "run_project",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal",
+            "type": "cppdbg",
+            "windows": {
+                "type": "cppvsdbg",
+                "program": "${workspaceFolder}/build/main_project.exe",
+            },
+            "linux": {
+                "type": "cppdbg",
+                "program": "${workspaceFolder}/build/main_project",
+            },
+            "environment": [
+                {
+                    "name": "test",
+                    "value": "value"
+                }
+            ],
+            "args": [
+                "--arg1",
+                "value1",
+                "--arg2",
+                "value2"
+            ],
+            "noDebug": true
+        },
+    ]
+}

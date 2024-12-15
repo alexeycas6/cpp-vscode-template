@@ -1,0 +1,21 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "generate_cmake",
+            "type": "shell",
+            "options": {
+                "env": {
+                    "name": "value"
+                }
+            },
+            "command": "cmake -G Ninja -Bbuild -DCMAKE_BUILD_TYPE=RelWithDebInfo -DCMAKE_C_COMPILER=clang -DCMAKE_CXX_COMPILER=clang++",
+        },
+        {
+            "label": "build_main",
+            "type": "shell",
+            "dependsOn": "generate_cmake",
+            "command": "cmake --build build --target main_project --parallel 10"
+        }
+    ]
+}
