@@ -7,13 +7,10 @@
             "cwd": "${workspaceFolder}",
             "console": "integratedTerminal",
             "type": "cppdbg",
+            "program": "${workspaceFolder}/build/main_project", // linux and macOs            
             "windows": {
                 "type": "cppvsdbg",
-                "program": "${workspaceFolder}/build/main_project.exe",
-            },
-            "linux": {
-                "type": "cppdbg",
-                "program": "${workspaceFolder}/build/main_project",
+                "program": "${workspaceFolder}/build/main_project.exe"
             },
             "environment": [
                 {
@@ -27,35 +24,7 @@
                 "--arg2",
                 "value2"
             ],
-            "preLaunchTask": "build_main",
-        },
-        {
-            "name": "run_project",
-            "request": "launch",
-            "cwd": "${workspaceFolder}",
-            "console": "integratedTerminal",
-            "type": "cppdbg",
-            "windows": {
-                "type": "cppvsdbg",
-                "program": "${workspaceFolder}/build/main_project.exe",
-            },
-            "linux": {
-                "type": "cppdbg",
-                "program": "${workspaceFolder}/build/main_project",
-            },
-            "environment": [
-                {
-                    "name": "test",
-                    "value": "value"
-                }
-            ],
-            "args": [
-                "--arg1",
-                "value1",
-                "--arg2",
-                "value2"
-            ],
-            "noDebug": true
-        },
+            "preLaunchTask": "build_main"
+        }
     ]
 }

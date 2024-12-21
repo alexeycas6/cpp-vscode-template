@@ -16,6 +16,17 @@
             "type": "shell",
             "dependsOn": "generate_cmake",
             "command": "cmake --build build --target main_project --parallel 10"
+        },
+        {
+            "label": "run_main",
+            "type": "shell",
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "command": "./build/main_project",
+            "windows": {
+                "command": "./build/main_project.exe"
+            }
         }
     ]
 }
