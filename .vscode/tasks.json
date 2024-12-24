@@ -26,6 +26,10 @@
             "command": "./build/main_project",
             "windows": {
                 "command": "./build/main_project.exe"
+            },
+            "presentation": {
+                "reveal": "always",
+                "panel": "dedicated"
             }
         }
     ]
